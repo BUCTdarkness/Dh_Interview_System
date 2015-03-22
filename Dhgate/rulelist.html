@@ -1,0 +1,55 @@
+<template name="rulelist">
+			<label class="control-label">规则列表:</label>
+			<div class="row" style="background-color: #CCC;">
+				<div class="span12  ">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>position</th>
+								<th>rank</th>
+								<th>Num</th>
+								<th>Algorithm</th>
+								<th>C++</th>
+								<th>JAVA</th>
+								<th>Database</th>
+								<th>DataMining</th>
+								<th>others</th>
+								<th>Easy</th>
+								<th>Normal</th>
+								<th>Difficult</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each rulelist }}
+								<tr class="rulelist {{selectrulelist}}" >
+									<td>{{drank}}</td>
+									<td>{{dposition}}</td>									
+									<td>{{Num}}</td>
+									<td>{{Algorithm}}</td>
+									<td>{{Cplus}}</td>
+									<td>{{JAVA}}</td>
+									<td>{{Database}}</td>
+									<td>{{DataMining}}</td>
+									<td>{{others}}</td>	
+									<td>{{Easy}}</td>
+									<td>{{Normal}}</td>
+									<td>{{Difficult}}</td>								
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+
+				<div class="span12">
+				<div class="well" style=" background-color: #CCC;">
+					<input type="button" class="btn addrules" value="Add Rules">
+					<input type="button" class="btn removerules" value="Remove Rules">
+				</div>
+				</div>	
+				<div class="span12">
+				{{#if addRules}}
+					{{> addRuleForm}}
+				{{/if}}
+				</div>	
+			</div>
+</template>

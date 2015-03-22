@@ -1,0 +1,41 @@
+<template name="searchlist">
+	<label class="control-label">搜索结果列表:</label>
+	<div class="row" style="background-color: #CCC;">
+		<div class="span12  ">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>type</th>
+						<th>name</th>
+						<th>difficulty</th>
+						<th>detail</th>
+						<th>knowledge</th>
+						<th>source</th>
+						<th>hit</th>
+						<th>PerfectAns</th>
+						<th>NormalAns</th>
+						<th>JuniorAns</th>
+						<th>confirm</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each searchlist}}
+						<tr class ="searchlist {{selectedsearchitem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{hit}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+							<td>{{confirm}}</td>
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</template>

@@ -1,0 +1,38 @@
+<template name="addPlayerForm">
+	{{#if currentUser}}
+	<label class="control-label">添加题目:</label>
+	<form class="well" style="background-color: #CCC;">
+		<div class="control-group ">
+			<label class="control-label" for="type">Type:</label>
+			<div class="controls input-medium">
+				<select id="type">
+					<option>Algorithm</option>
+					<option>C++</option>
+					<option>JAVA</option>
+					<option>Database</option>
+					<option>DataMining</option>
+					<option>others</option>
+				</select>
+			</div>
+		</div>
+		<div class="control-group ">
+			<label class="control-label" for="Difficulty">Difficulty:</label>
+			<div class="controls">
+				<select id="Difficulty">
+					<option>Easy</option>
+					<option>Normal</option>
+					<option>Difficult</option>
+				</select>
+			</div>
+		</div>
+        <input type="text" class="input-medium" name="Name" placeholder="name">
+ 		<input type="text" class="input-medium" name="Detail" placeholder="detail">
+		<input type="text" class="input-medium" name="Knowledge" placeholder="knowledge">
+		<input type="text" class="input-medium" name="Source" placeholder="source">
+		<input type="text" class="input-medium" name="PerfectAns" placeholder="PerfectAns">
+		<input type="text" class="input-medium" name="NormalAns" placeholder="NormalAns">
+		<input type="text" class="input-medium" name="BadAns" placeholder="JuniorAns">
+        <input type="submit" class ="btn" value="submit">		
+	</form>
+	{{/if}}
+</template>

@@ -1,0 +1,39 @@
+<template name="historylist">
+	<label class="control-label">历史列表:</label>
+	<div class="row" style="background-color: #CCC;">
+		{{#if ifAdmin}}
+			<div class="span12">
+			<div class="well" style=" background-color: #CCC;">
+				<input type="button" class="btn removehistory" value="Remove">
+				<input type="button" class="btn removeAllhistory" value="RemoveAll">
+			</div>
+			</div>	
+		{{/if}}
+		<div class="span12  ">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>type</th>
+						<th>name</th>
+						<th>difficulty</th>
+						<th>detail</th>								
+						<th>usedby</th>
+						<th>time</th>
+					</tr>
+				</thead>
+				<tbody>
+					{{#each historylist }}
+						<tr class="historylist {{selectHistory}}">
+							<td>{{type}}</td>									
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>									
+							<td>{{usedby}}</td>	
+							<td>{{time}}</td>							
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+		</div>
+	</div>	
+</template>

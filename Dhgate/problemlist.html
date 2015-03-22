@@ -1,0 +1,69 @@
+<template name="problemlist">
+		<div>
+			<ul class="nav nav-tabs">
+			<li><a class="problemtype0"  id ="0" href="#0" data-toggle="tab">All</a></li>
+			<li><a class="problemtype1"  id ="1" href="#1" data-toggle="tab">Algorithm</a></li>
+			<li><a class="problemtype2"  id ="2" href="#2" data-toggle="tab">C++</a></li>
+			<li><a class="problemtype3"  id ="3" href="#3" data-toggle="tab">JAVA</a></li>
+			<li><a class="problemtype4"  id ="4" href="#4" data-toggle="tab">Database</a></li>
+			<li><a class="problemtype5"  id ="5" href="#5" data-toggle="tab">DataMining</a></li>
+			<li><a class="problemtype6"  id ="6" href="#6" data-toggle="tab">others</a></li>
+			</ul>
+			<label class="control-label">我的题目列表:</label>
+			<div class="row" style="background-color: #CCC;">
+				<div class="span12  ">
+					<table class="table table-bordered">
+						<thead>
+							<tr>
+								<th>type</th>
+								<th>name</th>
+								<th>difficulty</th>
+								<th>detail</th>
+								<th>knowledge</th>
+								<th>source</th>
+								<th>hit</th>
+								<th>PerfectAns</th>
+								<th>NormalAns</th>
+								<th>JuniorAns</th>
+								<th>confirm</th>
+							</tr>
+						</thead>
+						<tbody>
+							{{#each player}}
+								<tr class ="player {{selectedClass}}">
+									<td>{{type}}</td>
+									<td>{{name}}</td>
+									<td>{{difficulty}}</td>
+									<td>{{detail}}</td>
+									<td>{{knowledge}}</td>
+									<td>{{source}}</td>
+									<td>{{hit}}</td>
+									<td>{{PerfectAns}}</td>
+									<td>{{NormalAns}}</td>
+									<td>{{BadAns}}</td>
+									<td>{{confirm}}</td>
+								</tr>
+							{{/each}}
+						</tbody>
+					</table>
+				</div>
+				<div class="span12">
+				<div class="well" style=" background-color: #CCC;">
+					{{#if showSelectedPlayer}}
+						<h4><small>Selected Problem:</small> {{showSelectedPlayer.name}}</h4>
+					{{/if}}
+					<input type="button" class="btn add" value="Add Problem">
+					<input type="button" class="btn remove" value="Remove Problem">
+					{{#if ifAdmin}}
+						<input type="button" class="btn btn-warning confirm" value="Confirm">
+					{{/if}}
+				</div>
+				</div>	
+				<div class="span12">
+				{{#if addProblem}}
+					{{> addPlayerForm}}
+				{{/if}}
+				</div>	
+			</div>
+		</div>
+</template>

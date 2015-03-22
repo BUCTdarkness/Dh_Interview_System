@@ -1,0 +1,39 @@
+<head>
+    <title>DhgateInterview</title>
+    <style type='text/css'>
+      body {
+        background-color: #CCC;
+      }
+    </style>
+</head>
+<body>
+	<nav id="navbar-example" class="navbar navbar-static-top navbar-inverse">
+      <div class="navbar-inner">
+      {{>navmain}}
+      </div>
+	</nav>
+<li>
+	{{loginButtons}}
+</li>
+    {{>leaderboard}}   
+</body>
+
+<template name="navmain">
+  <div class="container">
+    <a class="brand" href="#">DhgateInterview</a>
+    <ul class="nav">
+      <li><a class="select" href="#">Select</a></li>
+      <li><a class="MyProblems" href="#">MyProblems</a></li>
+      <li><a class="History" href="#">History</a></li>
+      {{#if ifAdmin}}
+        <li><a class="Rules" href="#">Rules</a></li>
+      {{/if}}
+
+    </ul>
+    <form class="navbar-search pull-left">
+      <input type="text" class="search-query search" name="search" placeholder="Search">
+      <input type="submit" class="btn" value="Search">
+    </form>
+  </div>
+</template>
+

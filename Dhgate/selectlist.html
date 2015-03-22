@@ -1,0 +1,285 @@
+<template name="selectlist">
+	
+	<!--startprint-->
+	<label class="control-label">面试题列表:</label>
+	<div class="row" style="background-color: #CCC;">
+		<div class="span12  ">
+			<table class="table table-bordered">
+				<thead>
+					<tr>
+						<th>type</th>
+						<th>name</th>
+						<th>difficulty</th>
+						<th>detail</th>
+						<th>knowledge</th>
+						<th>source</th>
+						<th>PerfectAns</th>
+						<th>NormalAns</th>
+						<th>JuniorAns</th>
+
+					</tr>
+				</thead>
+				<tbody>				
+					{{#each generatelistAlgorithmEasy}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistAlgorithmNormal}}
+						<tr class = "selectlist {{selectlistItem}}">
+
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{hit}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistAlgorithmDifficult}}
+						<tr class = "selectlist {{selectlistItem}}">
+
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistCplusEasy}}
+						<tr class = "selectlist {{selectlistItem}}">
+
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistCplusNormal}}
+						<tr class = "selectlist {{selectlistItem}}">
+
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistCplusDifficult}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistJAVAEasy}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistJAVANormal}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistJAVADifficult}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistDatabaseEasy}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistDatabaseNormal}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistDatabaseDifficult}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}							
+
+					{{#each generatelistDataMiningEasy}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}								
+					{{#each generatelistDataMiningNormal}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}	
+
+
+					{{#each generatelistDataMiningDifficult}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistothersEasy}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}
+
+					{{#each generatelistothersNormal}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}									
+					
+					{{#each generatelistothersDifficult}}
+						<tr class = "selectlist {{selectlistItem}}">
+							<td>{{type}}</td>
+							<td>{{name}}</td>
+							<td>{{difficulty}}</td>
+							<td>{{detail}}</td>
+							<td>{{knowledge}}</td>
+							<td>{{source}}</td>
+							<td>{{PerfectAns}}</td>
+							<td>{{NormalAns}}</td>
+							<td>{{BadAns}}</td>
+						</tr>
+					{{/each}}						
+
+				</tbody>
+			</table>
+		</div>
+	</div>
+	<!--endprint-->
+</template>

@@ -1,0 +1,46 @@
+<template name="addRuleForm">
+	{{#if currentUser}}
+	<label class="control-label">添加规则:</label>
+	<form class="well form-inline" style="background-color: #CCC;">
+
+		<div class ="control-group row-fluid">
+			<div class ="span4">
+				<label class ="control-label" for="rank">员工等级：</label>
+				<div class ="controls">
+					<select id="drank" >
+						<option>P1</option>
+						<option>P2</option>
+						<option>P3</option>
+						<option>P4</option>
+					</select>
+				</div>
+			</div>
+			<div class ="span8">
+				<div class="span4">
+				<label class ="control-label" for="position">员工职位：</label>
+				<div class ="controls">
+					<select id="dposition" >
+						<option>dev</option>
+						<option>data</option>
+						<option>front</option>
+						<option>manager</option>
+					</select>
+				</div>
+				</div>
+			</div>
+		</div>
+		<input type="text" class="input-medium" name="Num" placeholder="Num">
+		<input type="text" class="input-medium" name="Algorithm" placeholder="Algorithm">
+		<input type="text" class="input-medium" name="Cplus" placeholder="C++">
+		<input type="text" class="input-medium" name="JAVA" placeholder="JAVA">
+		<input type="text" class="input-medium" name="Database" placeholder="Database">
+		<input type="text" class="input-medium" name="DataMining" placeholder="DataMining">
+		<input type="text" class="input-medium" name="others" placeholder="others">
+		<input type="text" class="input-medium" name="Easy" placeholder="Easy(小数)">
+		<input type="text" class="input-medium" name="Normal" placeholder="Normal(小数)">
+		<input type="text" class="input-medium" name="Difficult" placeholder="Difficult(小数)">
+        <input type="submit" class ="btn" value="submit">	
+	
+	</form>
+	{{/if}}
+</template>

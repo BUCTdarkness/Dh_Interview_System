@@ -1,0 +1,73 @@
+<template name="leaderboard">
+
+<div class="container tabbable" data-spy="scroll" data-target="#navbar-example" data-offset="0">
+
+		{{#if Welcome}}
+			{{> welcomepage}}
+		{{/if}}
+
+		{{#if History}}
+			{{> historylist}}
+		{{/if}}
+
+		{{#if Rules}}
+			{{> rulelist}}
+		{{/if}}
+
+		{{#if search}}
+			{{> searchlist}}
+		{{/if}}
+
+		{{#if select}}
+		<form  class="well form-inline" style="background-color: #CCC;">
+			<div class ="control-group row-fluid">
+				<div class ="span4">
+					<label class ="control-label" for="rank">员工等级：</label>
+					<div class ="controls">
+						<select id="rank" >
+							<option>P1</option>
+							<option>P2</option>
+							<option>P3</option>
+							<option>P4</option>
+						</select>
+					</div>
+				</div>
+				<div class ="span8">
+					<div class="span4">
+					<label class ="control-label" for="position">员工职位：</label>
+					<div class ="controls">
+						<select id="position" >
+							<option>dev</option>
+							<option>data</option>
+							<option>front</option>
+							<option>manager</option>
+						</select>
+					</div>
+					</div>
+					<div class="span4">
+						<label class ="control-label" for="multiSelect3" >操作：</label>
+						<div class ="controls" id="multiSelect3">
+							<input type="submit" class ="btn" value="submit">
+							<input type="button" class ="btn" value=" help ">
+							<input type="button" class ="btn btn-danger print" value="  print  ">
+						</div>
+					</div>
+				</div>
+			</div>
+		</form>
+		{{/if}}
+
+		{{#if rank}}
+			{{#if position}}
+				{{#if rp}}
+					{{> selectlist}}
+				{{/if}}
+			{{/if}}
+		{{/if}}
+
+		{{#if MyProblems}}
+			{{> problemlist}}
+		{{/if}}
+
+</div>
+</template>
